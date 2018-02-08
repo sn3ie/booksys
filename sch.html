@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>蔵書管理：検索</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/sn3.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+
+<div id="header">
+<div id="hArea">	
+
+	<div id="hLogo">キーワード検索</div>
+
+	<div id="hNavi">
+		<ul>
+			<li><a href="./RegBook.html"><img src="./img/entry_book.jpg"></a></li>
+			<li><a href="./EntryUser.html"><img src="./img/entry_user.jpg"></a></li>
+		</ul>
+	</div>
+
+	</div>
+</div>
+
+<div id="main">
+<div id="SchArea">
+	<div id="SchTxt">
+	<form method="post" action="cgi-bin/abc.cgi">
+		<input type="search" name="Sch" size="130" maxlength=""  placeholder="検索キーワードを入力" id="keyWord">
+		<input type="image" src="img/search.jpg" onclick="document.frm.submit();" id="SchButton">
+	</form>
+	</div>
+</div>
+</div>
+
+<div id="Contents">
+<div id="SchRes">
+	
+	<div id="Squeeze">
+	<h3>絞り込みを表示</h3>
+    <div id="SquMenu">
+		<div id="Squtype">種別 <img src="./img/close.jpg" width="20px" onclick="changeIMG()" align=right></div>
+			<div id="typeBox">
+			<ul>
+				<li><a href="">- 図書</a></li>
+				<li><a href="">- 雑誌</a></li>
+				<li><a href="">- 漫画</a></li>
+				<li><a href="">- 絵本</a></li>
+			</ul>
+			</div>
+
+		<div id="Squpubyear">出版年 <img src="./img/close.jpg" width="20px" align=right></div>
+			<div class="pubyearBox">
+			<ul>
+				<li><input type="text" name="year" size="5" maxlength="4" >年</li>
+				～
+				<li><input type="text" name="year" size="5" maxlength="4" >年</li>
+			</ul>
+			</div>
+	</div>
+	</div>
+
+
+	<div id="Result"><h3>XX冊中　XX冊ヒット</h3>
+	<hr>
+	
+	</div>
+</div>
+</div>
+
+</body>
+</html>
