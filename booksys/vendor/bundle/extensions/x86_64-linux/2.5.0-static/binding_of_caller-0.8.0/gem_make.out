@@ -1,0 +1,16 @@
+current directory: /home/ogn3ie/booksys/vendor/bundle/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/usr/local/bin/ruby -r ./siteconf20180208-6313-ur7t0l.rb extconf.rb
+
+current directory: /home/ogn3ie/booksys/vendor/bundle/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** ターゲット 'clean' を make するルールがありません.  中止.
+
+current directory: /home/ogn3ie/booksys/vendor/bundle/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /home/ogn3ie/booksys/vendor/bundle/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.
