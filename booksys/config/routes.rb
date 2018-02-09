@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'booksys/EntryUser'
+  
+  get 'booksys/RegBook'
+  
+  get 'booksys/DetailMag'
+  
+  get 'booksys/DetailBook'
+  
+  get 'booksys/sch'
+
   get 'home/top'
 
   # The priority is based upon order of creation: first created -> highest priority.

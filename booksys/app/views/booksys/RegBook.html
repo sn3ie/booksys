@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>蔵書管理：登録</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/sn3.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styleReg.css">
+  </head>
+<body>
+
+<div id="header">
+<div id="hArea">	
+
+	<div id="hLogo">書籍登録</div>
+
+	<div id="hNavi">
+		<ul><li><img src="/entry_book.jpg"></li></ul>
+	</div>
+
+</div>
+</div>
+
+<div id="regMain">
+<div id="Reg">
+
+<!--　画面左 -->
+	<div id="infoMain">
+	<form  action="" method="post">
+
+		<div class="date"><label for="bacNo">バーコード番号</label>
+		<textarea id="bacNo"></textarea>
+		</div>
+		<div class="date"><label for="Type">種別</label>
+			<select name="Type">
+				<option value="book">図書</option>
+				<option value="ehon">絵本</option>
+				<option value="mag">雑誌</option>
+				<option value="comic">漫画</option>
+			</select>
+		</div>
+		<div class="date"><label for="linkNo">紐づけ番号</label>
+		<textarea id="linkNo"></textarea>
+		</div>
+
+		<div class="date"><label for="title">タイトル</label>
+		<textarea id="title"></textarea>
+		</div>
+		<div class="date"><label for="titleyomi">ﾀｲﾄﾙﾖﾐ</label>
+		<textarea id="titleyomi"></textarea>
+		</div>
+
+		<div class="date"><label for="series">シリーズ</label>
+		<textarea id="series"></textarea>
+		</div>
+		<div class="date"><label for="seriesyomi">ｼﾘｰｽﾞﾖﾐ</label>
+		<textarea id="seriesyomi"></textarea>
+		</div>
+
+		<div class="date"><label for="author">編著者</label>
+		<textarea id="author"></textarea>
+		</div>
+		<div class="date"><label for="authoryomi">ﾍﾝｼｮﾁｬﾖﾐ</label>
+		<textarea id="Authoryomi"></textarea>
+		</div>
+
+		<div class="date"><label for="publisher">出版社</label>
+		<textarea id="publisher"></textarea>
+		</div>
+		<div class="date"><label for="publisheryomi">ｼｭｯﾊﾟﾝｼｬﾖﾐ</label>
+		<textarea id="publisheryomi"></textarea>
+		</div>
+
+		<div class="date"><label for="content">目次/特集</label>
+		<textarea id="content"></textarea>
+		</div>
+
+		</form>
+	</div>
+
+<!--　画面右 -->
+	<div id="infoEtc">
+	<div id="status">状態</div>
+
+
+	<form  action="" method="post">
+	
+		<div class="date"><label for="content">所蔵場所</label>
+		<textarea id="content"></textarea>
+		</div>
+
+		<div class="date"><label for="content">請求ラベル</label>
+		<textarea id="content"></textarea>
+		</div>
+		<div class="date"><label for="content"></label>
+		<textarea id="content"></textarea>
+		</div>
+		<div class="date"><label for="content"></label>
+		<textarea id="content"></textarea>
+		</div>
+
+		<div class="date"><label for="content">出版年月日</label>
+		<textarea id="content"></textarea>
+		</div>
+
+		<div class="date"><label for="content">価格</label>
+		<textarea id="content"></textarea>
+		</div>
+
+		<div class="date"><label for="content">ISBN1/ISSN</label>
+		<textarea id="content"></textarea>
+		</div>
+		<div class="date"><label for="content">ISBN2</label>
+		<textarea id="content"></textarea>
+		</div>
+
+		<div class="date"><label for="memo">メモ</label>
+		<textarea id="memo"></textarea>
+		</div>
+
+		</form>
+	</div>
+
+
+</div>
+</div>
+
+</body>
+</html>
