@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "price",          limit: 4
     t.text    "isbn1_issn",     limit: 65535
     t.text    "isbn2",          limit: 65535
-    t.text    "type",           limit: 65535
+    t.text    "types",          limit: 65535
     t.text    "collection",     limit: 65535
     t.text    "label1",         limit: 65535
     t.text    "label2",         limit: 65535

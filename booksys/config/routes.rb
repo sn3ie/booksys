@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
-  resources :companies
-  get 'booksys/EntryUser'
-  
-  get 'booksys/RegBook'
-  
-  get 'booksys/DetailMag'
-  
-  get 'booksys/DetailBook'
-  
-  get 'booksys/sch'
-
-  get 'home/top'
-
+  resources :books
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
