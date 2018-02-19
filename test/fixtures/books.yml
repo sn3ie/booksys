@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bar_no: 1
+  link_no: 1
+  title: MyText
+  title_yomi: MyText
+  series: MyText
+  series_yomi: MyText
+  volume: MyText
+  author: MyText
+  author_yomi: MyText
+  publisher: MyText
+  publisher_yomi: MyText
+  p_ymd: 1
+  price: 1
+  isbn1_issn: MyText
+  isbn2: MyText
+  types: MyText
+  collection: MyText
+  label1: MyText
+  label2: MyText
+  label3: MyText
+  status: MyText
+  lend_date: 1
+  back_date: 1
+  lend_flg: 1
+  user_id: 1
+  memo: MyText
+
+two:
+  bar_no: 1
+  link_no: 1
+  title: MyText
+  title_yomi: MyText
+  series: MyText
+  series_yomi: MyText
+  volume: MyText
+  author: MyText
+  author_yomi: MyText
+  publisher: MyText
+  publisher_yomi: MyText
+  p_ymd: 1
+  price: 1
+  isbn1_issn: MyText
+  isbn2: MyText
+  types: MyText
+  collection: MyText
+  label1: MyText
+  label2: MyText
+  label3: MyText
+  status: MyText
+  lend_date: 1
+  back_date: 1
+  lend_flg: 1
+  user_id: 1
+  memo: MyText
