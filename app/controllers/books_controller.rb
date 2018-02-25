@@ -16,7 +16,7 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
 #    @books = Book.all
-    @Books = Book.where(activated: true).paginate(:page => params[:page], :per_page => 10).search(params[:search])
+    @books = Book.where(activated: true).page(params[:page])
   end
  
   # GET /books/1

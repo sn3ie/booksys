@@ -48,3 +48,6 @@ end
 
 # Gemfile
 gem 'will_paginate'
+
+# Gemfile
+gem 'kaminari'
