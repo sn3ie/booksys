@@ -16,7 +16,7 @@
 	<div id="hNavi">
 		<ul>
 			<li><%= link_to image_tag('entry_book.jpg'), new_book_path %></li>
-			<li><a href="./EntryUser.html"><img src="entry_user.jpg"></a></li>
+			<li><a href="./EntryUser.html"><img src="./entry_user.jpg"></a></li>
 		</ul>
 	</div>
 
@@ -30,13 +30,6 @@
 		<%= text_field_tag :search %>
 		<%= submit_tag 'Search', :tilte => nil %>
 	<% end %>
-
-	
-	
-	<form method="post" action="cgi-bin/abc.cgi">
-		<input type="search" name="Sch" size="130" maxlength=""  placeholder="検索キーワードを入力" id="keyWord">
-		<input type="image" src="/search.jpg" onclick="document.frm.submit();" id="SchButton">
-	</form>
 	</div>
 </div>
 </div>
@@ -70,8 +63,10 @@
 
 	<div id="Result"><h3>XX冊中　XX冊ヒット</h3>
 	<hr>
-	<%= page_entries_info @books %>
-	 <%= render @books %>
+    <% @books.each do |book| %>
+	<%= book.bar_no %>
+    <% end %>
+
 	<%= paginate @books %>
 	</div>
 </div>

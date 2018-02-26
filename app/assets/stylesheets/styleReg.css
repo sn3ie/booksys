@@ -44,44 +44,29 @@ div#Reg{
 	width: 980px;
 }
 
-label{
-	display: inline-block;
-	vertical-align:top;
-}
-
 .date{
 	margin: 5px;
+	clear: both;
 }
+
 
 /* メインの左側　*/
 div#infoMain{
 	margin: 0 auto;
-	padding: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
 	height: 650px;
-	width: 60%;
+	width: 50%;
 	float: left;
 	font-size: 13px;
 /*	background-color: pink;*/
 }
 
-#infoMain label{
+#infoMain p{
+	float: left;
 	width: 20%;
 }
 
-#infoMain textarea{
-	height: 40px;
-	width: 70%;
-}
-
-textarea#bacNo{
-	height: 15px;
-	width: 70%;
-}
-
-textarea#linkNo{
-	height: 15px;
-	width: 30%;
-}
 
 /* メインの右側　*/
 div#infoEtc{
@@ -92,12 +77,8 @@ div#infoEtc{
 /*	background-color: orange;*/
 }
 
-#infoEtc label{
+#infoEtc p{
 	width: 10%;
 }
 
-div#infoEtc textarea{
-	height: 15px;
-	width: 20%;
-}
 

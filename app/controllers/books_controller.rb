@@ -15,8 +15,10 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
+    @books = Book.page(params[:page])
+#    @books = Book.page(params[:page]).per(10).order(:bar_no)
 #    @books = Book.all
-    @books = Book.where(activated: true).page(params[:page])
+#   @books = Book.where(bar_no: true).page(params[:page])
   end
  
   # GET /books/1

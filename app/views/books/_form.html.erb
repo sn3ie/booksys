@@ -11,110 +11,129 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :バーコード番号 %><br>
-    <%= f.number_field :bar_no %>
-  </div>
-  <div class="field">
-    <%= f.label :Link番号 %><br>
-    <%= f.number_field :link_no %>
-  </div>
-  <div class="field">
-    <%= f.label :タイトル %><br>
-    <%= f.text_area :title %>
-  </div>
-  <div class="field">
-    <%= f.label :ﾀｲﾄﾙﾖﾐ %><br>
-    <%= f.text_area :title_yomi %>
-  </div>
-  <div class="field">
-    <%= f.label :シリーズ %><br>
-    <%= f.text_area :series %>
-  </div>
-  <div class="field">
-    <%= f.label :ｼﾘｰｽﾞﾖﾐ %><br>
-    <%= f.text_area :series_yomi %>
-  </div>
-  <div class="field">
-    <%= f.label :編著者 %><br>
-    <%= f.text_area :author %>
-  </div>
-  <div class="field">
-    <%= f.label :ﾍﾝﾁｮｼｬﾖﾐ %><br>
-    <%= f.text_area :author_yomi %>
-  </div>
+<div id="regMain">
+<div id="Reg">
+
+<!--　画面左 -->
+	<div id="infoMain">
+	<form  action="" method="post">
+
+		<div class="date"><p>バーコード番号</p>
+		<%= f.number_field :bar_no %>
+		</div>
+		<div class="date"><p>種別</p>
+			<select name="Type">
+				<option value="book">図書</option>
+				<option value="ehon">絵本</option>
+				<option value="mag">雑誌</option>
+				<option value="comic">漫画</option>
+			</select>
+		</div>
+		<div class="date"><p>紐づけ番号</p>
+		<%= f.number_field :link_no %>
+		</div>
+
+		<div class="date"><p>タイトル</p>
+		<%= f.text_area :title %>
+		</div>
+		<div class="date"><p>ﾀｲﾄﾙﾖﾐ</p>
+		<%= f.text_area :title_yomi %>
+		</div>
+
+		<div class="date"><p>シリーズ</p>
+		<%= f.text_area :series %>
+		</div>
+		<div class="date"><p>ｼﾘｰｽﾞﾖﾐ</p>
+		<%= f.text_area :series_yomi %>
+		</div>
+
+		<div class="date"><p>編著者</p>
+		<%= f.text_area :author %>
+		</div>
+		<div class="date"><p>ﾍﾝｼｮﾁｬﾖﾐ</p>
+		<%= f.text_area :author_yomi %>
+		</div>
+
+		<div class="date"><p>出版社</p>
+		<%= f.text_area :publisher %>
+		</div>
+		<div class="date"><p>ｼｭｯﾊﾟﾝｼｬﾖﾐ</p>
+		<%= f.text_area :publisher_yomi %>
+		</div>
+
+		<div class="date"><p>目次/特集</p>
+		<textarea id="content"></textarea>
+		</div>
+
+		</form>
+	</div>
+
+<!--　画面右 -->
+	<div id="infoEtc">
+	<div id="status">状態<%= f.text_area :status %><br>
+	<%= f.number_field :lend_date %>〜<%= f.number_field :back_date %><br>
+	<%= f.number_field :user_id %></div>
+
+<form  action="" method="post">
+	
+		<div class="date"><label for="content">所蔵場所</label>
+		<%= f.text_area :collection %>
+		</div>
+
+		<div class="date"><label for="content">請求ラベル</label>
+		<%= f.text_area :label1 %>
+		</div>
+		<div class="date"><label for="content"></label>
+		<%= f.text_area :label2 %>
+		</div>
+		<div class="date"><label for="content"></label>
+		<%= f.text_area :label3 %>
+		</div>
+
+		<div class="date"><label for="content">出版年月日</label>
+		<%= f.number_field :p_ymd %>
+		</div>
+
+		<div class="date"><label for="content">価格</label>
+		<%= f.number_field :price %>
+		</div>
+
+		<div class="date"><label for="content">ISBN1/ISSN</label>
+		<%= f.text_area :isbn1_issn %>
+		</div>
+		<div class="date"><label for="content">ISBN2</label>
+		<%= f.text_area :isbn2 %>
+		</div>
+
+		<div class="date"><label for="memo">メモ</label>
+		<%= f.text_area :memo %>
+		</div>
+
+
   <div class="field">
     <%= f.label :巻号 %><br>
     <%= f.text_area :volume %>
   </div>
-  <div class="field">
-    <%= f.label :出版社 %><br>
-    <%= f.text_area :publisher %>
-  </div>
-  <div class="field">
-    <%= f.label :ｼｭｯﾊﾟﾝｼｬﾖﾐ %><br>
-    <%= f.text_area :publisher_yomi %>
-  </div>
-  <div class="field">
-    <%= f.label :p_ymd %><br>
-    <%= f.number_field :p_ymd %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.number_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :isbn1_issn %><br>
-    <%= f.text_area :isbn1_issn %>
-  </div>
-  <div class="field">
-    <%= f.label :isbn2 %><br>
-    <%= f.text_area :isbn2 %>
-  </div>
+
+
   <div class="field">
     <%= f.label :types %><br>
     <%= f.text_area :types %>
   </div>
-  <div class="field">
-    <%= f.label :collection %><br>
-    <%= f.text_area :collection %>
-  </div>
-  <div class="field">
-    <%= f.label :label1 %><br>
-    <%= f.text_area :label1 %>
-  </div>
-  <div class="field">
-    <%= f.label :label2 %><br>
-    <%= f.text_area :label2 %>
-  </div>
-  <div class="field">
-    <%= f.label :label3 %><br>
-    <%= f.text_area :label3 %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_area :status %>
-  </div>
-  <div class="field">
-    <%= f.label :lend_date %><br>
-    <%= f.number_field :lend_date %>
-  </div>
-  <div class="field">
-    <%= f.label :back_date %><br>
-    <%= f.number_field :back_date %>
-  </div>
+
+
   <div class="field">
     <%= f.label :lend_flg %><br>
     <%= f.number_field :lend_flg %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :memo %><br>
-    <%= f.text_area :memo %>
-  </div>
+
+		</form>
+	</div>
+
+</div>
+</div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
