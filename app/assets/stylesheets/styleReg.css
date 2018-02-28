@@ -44,9 +44,8 @@ div#Reg{
 	width: 980px;
 }
 
-.date{
+div.date{
 	margin: 5px;
-	clear: both;
 }
 
 
@@ -59,7 +58,7 @@ div#infoMain{
 	width: 50%;
 	float: left;
 	font-size: 13px;
-/*	background-color: pink;*/
+	background-color: pink;
 }
 
 #infoMain p{
@@ -71,14 +70,15 @@ div#infoMain{
 /* メインの右側　*/
 div#infoEtc{
 	margin: 0 auto;
-	padding: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
 	height: 650px;
 	font-size: 13px;
-/*	background-color: orange;*/
+	background-color: orange;
 }
 
 #infoEtc p{
+	float: left;
 	width: 10%;
+	display: block;
 }
-
-

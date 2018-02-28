@@ -128,5 +128,9 @@ div#Result{
 	width: 750px;
 	margin: 0 10px;
 	float: right;
-	border: solid 1px pink; 
+}
+
+div#Result tr{
+	margin: 10px;
+	border: solid 1px pink;
 }

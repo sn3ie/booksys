@@ -16,18 +16,12 @@
 
 <!--　画面左 -->
 	<div id="infoMain">
-	<form  action="" method="post">
 
 		<div class="date"><p>バーコード番号</p>
 		<%= f.number_field :bar_no %>
 		</div>
 		<div class="date"><p>種別</p>
-			<select name="Type">
-				<option value="book">図書</option>
-				<option value="ehon">絵本</option>
-				<option value="mag">雑誌</option>
-				<option value="comic">漫画</option>
-			</select>
+		<%= f.text_area :types %>
 		</div>
 		<div class="date"><p>紐づけ番号</p>
 		<%= f.number_field :link_no %>
@@ -65,47 +59,44 @@
 		<textarea id="content"></textarea>
 		</div>
 
-		</form>
 	</div>
 
 <!--　画面右 -->
 	<div id="infoEtc">
-	<div id="status">状態<%= f.text_area :status %><br>
-	<%= f.number_field :lend_date %>〜<%= f.number_field :back_date %><br>
-	<%= f.number_field :user_id %></div>
-
-<form  action="" method="post">
 	
-		<div class="date"><label for="content">所蔵場所</label>
+		<div class="date"><p>状態</p><%= f.text_area :status %></div>
+		<div class="date"><p>貸出日</p><%= f.number_field :lend_date %>〜</div>
+		<div class="date"><p>返却日</p><%= f.number_field :back_date %></div>
+		<div class="date"><p>利用者</p><%= f.number_field :user_id %></div>
+
+		<div class="date"><p>所蔵場所</p>
 		<%= f.text_area :collection %>
 		</div>
 
-		<div class="date"><label for="content">請求ラベル</label>
+		<div class="date"><p>請求ラベル</p>
 		<%= f.text_area :label1 %>
 		</div>
-		<div class="date"><label for="content"></label>
-		<%= f.text_area :label2 %>
+		<div class="date"><p></p><%= f.text_area :label2 %>
 		</div>
-		<div class="date"><label for="content"></label>
-		<%= f.text_area :label3 %>
+		<div class="date"><p></p><%= f.text_area :label3 %>
 		</div>
 
-		<div class="date"><label for="content">出版年月日</label>
+		<div class="date"><p>出版年月日</p>
 		<%= f.number_field :p_ymd %>
 		</div>
 
-		<div class="date"><label for="content">価格</label>
+		<div class="date"><p>価格</p>
 		<%= f.number_field :price %>
 		</div>
 
-		<div class="date"><label for="content">ISBN1/ISSN</label>
+		<div class="date"><p>ISBN1/ISSN</p>
 		<%= f.text_area :isbn1_issn %>
 		</div>
-		<div class="date"><label for="content">ISBN2</label>
+		<div class="date"><p>ISBN2</p>
 		<%= f.text_area :isbn2 %>
 		</div>
 
-		<div class="date"><label for="memo">メモ</label>
+		<div class="date"><p>メモ</p>
 		<%= f.text_area :memo %>
 		</div>
 
@@ -115,26 +106,20 @@
     <%= f.text_area :volume %>
   </div>
 
-
-  <div class="field">
-    <%= f.label :types %><br>
-    <%= f.text_area :types %>
-  </div>
-
-
   <div class="field">
     <%= f.label :lend_flg %><br>
     <%= f.number_field :lend_flg %>
   </div>
 
-		</form>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
 	</div>
 
 </div>
 </div>
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
 <% end %>

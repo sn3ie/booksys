@@ -1,9 +1,6 @@
 <head>
   <meta charset="utf-8">
   <title>蔵書管理：検索</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/sn3.js"></script>
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   </head>
 <p id="notice"><%= notice %></p>
@@ -26,9 +23,9 @@
 <div id="main">
 <div id="SchArea">
 	<div id="SchTxt">
-	<%= form_tag(books_path) do %>
+	<%= form_tag(books_path, method: :get) do %>
 		<%= text_field_tag :search %>
-		<%= submit_tag 'Search', :tilte => nil %>
+		<%= submit_tag '検索', :tilte => nil %>
 	<% end %>
 	</div>
 </div>
@@ -62,9 +59,36 @@
 	</div>
 
 	<div id="Result"><h3>XX冊中　XX冊ヒット</h3>
+	<%= link_to '検索条件のクリア', request.path %>
 	<hr>
     <% @books.each do |book| %>
-	<%= book.bar_no %>
+	<div id="list">
+      <tr>
+        <td><%= book.bar_no %></td>
+        <td><%= book.title %></td>
+        <td><%= book.title_yomi %></td>
+        <td><%= book.series %></td>
+        <td><%= book.series_yomi %></td>
+        <td><%= book.volume %></td>
+        <td><%= book.author %></td>
+        <td><%= book.author_yomi %></td>
+        <td><%= book.publisher %></td>
+        <td><%= book.publisher_yomi %></td>
+        <td><%= book.p_ymd %></td>
+        <td><%= book.isbn1_issn %></td>
+        <td><%= book.isbn2 %></td>
+        <td><%= book.types %></td>
+        <td><%= book.collection %></td>
+        <td><%= book.label1 %></td>
+        <td><%= book.label2 %></td>
+        <td><%= book.label3 %></td>
+        <td><%= book.status %></td>
+        <td><%= link_to '詳細', book %></td>
+        <td><%= link_to '編集', edit_book_path(book) %></td>
+        <td><%= link_to '削除', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+	</div>
     <% end %>
 
 	<%= paginate @books %>
