@@ -1,5 +1,24 @@
-<h1>New Book</h1>
+<head>
+  <meta charset="utf-8">
+  <title>蔵書管理：登録</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/sn3.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styleReg.css">
+  </head>
+<div id="header">
+<div id="hArea">	
 
+	<div id="hLogo">書籍登録</div>
+
+	<div id="hNavi">
+		<ul><li><img src="/entry_book.jpg"></li></ul>
+	</div>
+
+</div>
+</div>
+
+<%= link_to '検索画面', books_path %>
 <%= render 'form' %>
 
-<%= link_to 'Back', books_path %>
+

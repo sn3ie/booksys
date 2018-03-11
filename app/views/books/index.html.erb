@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <title>蔵書管理：検索</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   </head>
 <p id="notice"><%= notice %></p>
 
@@ -24,8 +24,8 @@
 <div id="SchArea">
 	<div id="SchTxt">
 	<%= form_tag(books_path, method: :get) do %>
-		<%= text_field_tag :search %>
-		<%= submit_tag '検索', :tilte => nil %>
+		<%= text_field_tag :search, '', class: 'form-control',maxlength: 100, placeholder: '検索キーワードを入力' %>
+		<%= image_submit_tag('search.jpg', :class => "sch_icon") %>
 	<% end %>
 	</div>
 </div>
@@ -39,14 +39,14 @@
     <div id="SquMenu">
 		<div id="Squtype">種別 <img src="/close.jpg" width="20px" onclick="changeIMG()" align=right></div>
 			<div id="typeBox">
-			<ul>
-				<li><a href="">- 図書</a></li>
-				<li><a href="">- 雑誌</a></li>
-				<li><a href="">- 漫画</a></li>
-				<li><a href="">- 絵本</a></li>
-			</ul>
+		<% @book.each do |book| %>
+		<ul>
+			<%= form_tag(books_path) do %>
+			<li><%= submit_tag(book.types) %></li>
+			<% end %>
+		</ul>
+		    <% end %>
 			</div>
-
 		<div id="Squpubyear">出版年 <img src="/close.jpg" width="20px" align=right></div>
 			<div class="pubyearBox">
 			<ul>
@@ -58,39 +58,30 @@
 	</div>
 	</div>
 
-	<div id="Result"><h3>XX冊中　XX冊ヒット</h3>
-	<%= link_to '検索条件のクリア', request.path %>
+	<div id="Result"><h3>XX冊中　XX冊ヒット</h3><%= link_to '検索条件のクリア', request.path %>
 	<hr>
     <% @books.each do |book| %>
 	<div id="list">
       <tr>
-        <td><%= book.bar_no %></td>
-        <td><%= book.title %></td>
-        <td><%= book.title_yomi %></td>
-        <td><%= book.series %></td>
-        <td><%= book.series_yomi %></td>
-        <td><%= book.volume %></td>
-        <td><%= book.author %></td>
-        <td><%= book.author_yomi %></td>
-        <td><%= book.publisher %></td>
-        <td><%= book.publisher_yomi %></td>
-        <td><%= book.p_ymd %></td>
-        <td><%= book.isbn1_issn %></td>
-        <td><%= book.isbn2 %></td>
-        <td><%= book.types %></td>
-        <td><%= book.collection %></td>
-        <td><%= book.label1 %></td>
-        <td><%= book.label2 %></td>
-        <td><%= book.label3 %></td>
-        <td><%= book.status %></td>
-        <td><%= link_to '詳細', book %></td>
+    		<div id="datelist">
+        	<td><%= link_to book.title, book, :class => "title" %></td>
+        	<td><%= book.series %></td>
+        	<td><%= book.volume %></td>
+        	<td><%= book.author %></td>
+        	<td><%= book.publisher %></td>
+        	<td><%= book.p_ymd %></td>
+      	</div>
+    		<div id="lAicon">
+					<dl><dt></dt><dd><%= book.label1 %></dd></dl>
+					<dl><dt></dt><dd><%= book.label2 %></dd></dl>
+					<dl><dt></dt><dd><%= book.label3 %></dd></dl>
+				</div>
         <td><%= link_to '編集', edit_book_path(book) %></td>
-        <td><%= link_to '削除', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', book, method: :delete, data: { confirm: '本当に削除して良い？' } %></td>
       </tr>
 
 	</div>
     <% end %>
-
 	<%= paginate @books %>
 	</div>
 </div>

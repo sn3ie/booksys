@@ -1,9 +1,6 @@
 <head>
   <meta charset="utf-8">
   <title>蔵書管理：書誌詳細 図書</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/sn3.js"></script>
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styleDetail.css">
   </head>
 <p id="notice"><%= notice %></p>
@@ -38,13 +35,11 @@
 
 
 <div id="SeriesListB">
-<div id="sListMain"><h3>シリーズ一覧 <img src="./img/open.jpg" width="15px"></h3>
+<div id="sListMain">
+	
+<h3>シリーズ一覧</h3>
 	<div class="list">
-		<dl><dt>1.</dt><dd>書名</dd><dd>巻号</dd><dd>出版年月日</dd><dd>状態</dd></dl>
-		<dl><dt>2.</dt><dd>書名</dd><dd>巻号</dd><dd>出版年月日</dd><dd>状態</dd></dl>
-		<dl><dt>3.</dt><dd>書名</dd><dd>巻号</dd><dd>出版年月日</dd><dd>状態</dd></dl>
-		<dl><dt>4.</dt><dd>書名</dd><dd>巻号</dd><dd>出版年月日</dd><dd>状態</dd></dl>
-		<dl><dt>5.</dt><dd>書名</dd><dd>巻号</dd><dd>出版年月日</dd><dd>状態</dd></dl>
+		<dl><dt><%= @book.bar_no %>.</dt><dd><%= @book.title %></dd><dd><%= @book.volume %></dd><dd><%= @book.p_ymd %></dd><dd><%= @book.status %></dd></dl>
 	</div>
 </div>
 </div>

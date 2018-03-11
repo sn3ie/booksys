@@ -51,34 +51,32 @@ div#SchTxt{
 	width: 100%;
 }
 
-input{
-	float: left;
-}
-
-input#keyWord{
+.form-control{
 	height: 50px;
 	width: 90%;
 	margin-left: 10px;
+	float: left;
 }
 
-input#SchButton{
-	border: 0px;
+.sch_icon{
+	width: 7%;
 	margin-left: 10px;
-	height: 45px;
-	width: 45px;
+	display: inline-block;
 }
+
 
 /* コンテンツのCSS　*/
 div#Contents{
-	height: 500px;
 	width: 100%;
-	margin: 10px 0;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	clear: both;
 }
 
 div#SchRes{
 	margin: 0 auto;
 	width: 980px;
-	height: 300px;
+	overflow:hidden;
 }
 
 /* コンテンツの左側　*/
@@ -130,7 +128,40 @@ div#Result{
 	float: right;
 }
 
-div#Result tr{
+div#list{
 	margin: 10px;
-	border: solid 1px pink;
+	padding: 10px;
+	overflow:hidden;
+	clear: both;
+	border-bottom: solid 1px #dcdcdc
+}
+
+div#datelist{
+	width: 75%;
+	height: 100px;
+	float: left;
+}
+
+div#datelist td{
+	word-wrap:break-word;
+}
+
+.title{
+	font-size: 30px;
+	text-decoration: none;
+	clear: both
+}
+
+div#lAicon{
+	width: 10%;
+	display: inline-block;
+}
+
+div#lAicon dl{
+	border: solid 1px #d3d3d3;
+	width: 50px;
+	margin: 1px ;
+	padding: 2px;
+	border-radius: 5px;
+	background-color: #fdf5e6;
 }

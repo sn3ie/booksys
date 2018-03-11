@@ -15,9 +15,8 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-#    @books = Book.page(params[:page])
-#   
     @books = Book.page(params[:page]).search(params[:search]).where.not(bar_no: nil)
+    @book = Book.select(:types).uniq
   end
  
   # GET /books/1
@@ -88,4 +87,3 @@ class BooksController < ApplicationController
       params.require(:book).permit(:bar_no, :link_no, :title, :title_yomi, :series, :series_yomi, :volume, :author, :author_yomi, :publisher, :publisher_yomi, :p_ymd, :price, :isbn1_issn, :isbn2, :types, :collection, :label1, :label2, :label3, :status, :lend_date, :back_date, :lend_flg, :user_id, :memo)
     end
 end
-
